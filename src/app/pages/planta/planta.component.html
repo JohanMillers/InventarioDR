@@ -1,0 +1,166 @@
+<h1>
+    Registro <small>Nombre de Planta</small></h1>
+<hr>
+
+<div class="row text-right">
+    <div class="col">
+        <button class="btn btn-danger" routerLink="/plantas">
+            <i class="fa fa-arrow-left">
+            Regresar
+          </i>
+        </button>
+    </div>
+</div>
+
+<div class="row animated fadeIn faster">
+    <div class="col">
+        <form (ngSubmit)="guardar( f )" #f="ngForm">
+            <div class="form-group">
+                <label class="label">Firebase ID</label>
+                <input type='text' name="id" placeholder="Firebase ID" [(ngModel)]="planta.id" class="form-control" disabled="disabled">
+                <small class="form-text text-muted">Este campo es autogenerado</small>
+
+                <div class="form-group">
+                    <i class="fas fa-warehouse"></i>
+                    <label class="label">Departamento</label>
+                    <select class="form-control form-control-lg" name="departamento" [(ngModel)]="planta.depatamento">
+                      <option selected>---Selecciona un departamento---</option>
+                       <option *ngFor="let Depart of Departamento" value={{Depart.Departamento}}>{{Depart.Departamento}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-user"></i>
+                    <label class="label">Glower</label>
+                    <select class="form-control form-control-lg" name="Glower" [(ngModel)]="planta.glower">
+                      <option selected>Glower</option>
+                       <option *ngFor="let Depart of Departamento" value={{Depart.Glower}}>{{Depart.Glower}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-home"></i>
+                    <label class="label">Casa</label>
+                    <select class="form-control form-control-lg" name="casa" [(ngModel)]="planta.casa">
+                        <option selected> ---Selecciona una Casa--- </option>
+                        <option value=" a1 ">A1</option>
+                        <option value="a2 ">A2</option>
+                        <option value="a3 ">A3</option>
+                        <option value="a4 ">A4</option>
+                        <option value="a5 ">A5</option>
+                        <option value="a6 ">A6</option>
+                        <option value="a7 ">A7</option>
+                        <option value="a8 ">A8</option>
+                        <option value="a9 ">A9</option>
+                        <option value="a10 ">A10</option>
+                        <option value="a11 ">A11</option>
+                        <option value="a12 ">A12</option>
+                        <option value="a13 ">A13</option>
+                    </select>
+                </div>
+                <div class="form-group ">
+                    <label class="label">Banco/Cantero</label>
+                    <select class="form-control form-control-lg " name="cantero" [(ngModel)]="planta.cantero">
+                        <option selected> ---Selecciona un Banco--- </option>
+                        <option value="1 ">1</option>
+                        <option value="2 ">2</option>
+                        <option value="3 ">3</option>
+                        <option value="4 ">4</option>
+                        <option value="5 ">5</option>
+                        <option value="6 ">6</option>
+                        <option value="7 ">7</option>
+                        <option value="8 ">8</option>
+                        <option value="9 ">9</option>
+                        <option value="10 ">10</option>
+                        <option value="11 ">11</option>
+                        <option value="12 ">12</option>
+                        <option value="13 ">13</option>
+                    </select>
+                </div>
+                <div class="form-group ">
+                    <i class="fas fa-seedling plant"></i>
+                    <label class="label">Genero</label>
+                    <select class="form-control form-control-lg " name="genero" [(ngModel)]="planta.genero">
+                        <option selected> ---Selecciona un Genero--- </option>
+                        <option value="montera ">Montera</option>
+                        <option value="neruda ">Neruda</option>
+                    </select>
+                </div>
+                <div class="form-group ">
+                    <i class="fas fa-seedling plant"></i>
+                    <label class="label">Especie</label>
+                    <select class="form-control form-control-lg " name="especie" [(ngModel)]="planta.especie">
+                        <option selected> ---Selecciona una Especie--- </option>
+                        <option value="montera ">Montera</option>
+                        <option value="neruda ">Neruda</option>
+                    </select>
+                </div>
+                <div class="form-group ">
+                    <i class="fas fa-seedling plant"></i>
+                    <label class="label">Variedad</label>
+                    <select class="form-control form-control-lg " name="variedad" [(ngModel)]="planta.variedad">
+                        <option selected> ---Selecciona una Variedad--- </option>
+                        <option value="montera ">Montera</option>
+                        <option value="neruda ">Neruda</option>
+                    </select>
+                </div>
+                <div class="form-group ">
+                    <i class="fas fa-calendar-week"></i>
+                    <label class="label">Lote</label>
+                    <input type="text " class="form-control " name="lote" [(ngModel)]="planta.lote">
+                </div>
+                <div class="form-group ">
+                    <i class="fas fa-box"></i>
+                    <label class="label">Container</label>
+                    <select class="form-control form-control-lg " name="container" [(ngModel)]="planta.container">
+                      <option selected> ---Selecciona un Recipiente--- </option>
+                      <option value="pote ">Pote</option>
+                      <option value="bandeja ">Bandejas</option>
+                      <option value="nada ">Nada</option>
+                  </select>
+                </div>
+                <div class="form-group ">
+                    <i class="fas fa-box-open"></i>
+                    <label class="label">Envase</label>
+                    <select class="form-control form-control-lg " name="envase" [(ngModel)]="planta.envase">
+                      <option selected> ---Selecciona un Recipiente--- </option>
+                      <option value="p4 ">P4</option>
+                      <option value="p6 ">P6</option>
+                      <option value="p8 ">P8</option>
+                  </select>
+                </div>
+                <div class="form-group ">
+                    <i class="fas fa-seedling plant"></i>
+                    <label class="label">PPP</label>
+                    <input type="text " class="form-control " name="ppp" [(ngModel)]="planta.ppp">
+                </div>
+                <div class="form-group ">
+                    <label class="label">Categoria</label>
+                    <select class="form-control form-control-lg " name="categoria" [(ngModel)]="planta.categoria">
+                    <option selected > ---Selecciona una Categoria--- </option>
+                    <option value="finish ">Finish</option>
+                    <option value="stock ">Stock</option>
+                </select>
+                </div>
+                <div class="form-group ">
+                    <label class="label">Estado</label>
+                    <select class="form-control form-control-lg " name="estado" [(ngModel)]="planta.estado">
+                    <option selected> ---Selecciona un Estado--- </option>
+                    <option value="finish ">Finish</option>
+                    <option value="process ">In Process</option>
+                </select>
+                </div>
+
+                <div class="form-group ">
+                    <label class="label">Cantidad</label>
+                    <input type="text " class="form-control " name="cantidad" [(ngModel)]="planta.cantidad">
+                </div>
+
+                <div class="form-group text-center ">
+                    <button type="submit " class="btn btn-primary w-25 ">
+              <i class="fa fa-save "></i>
+              Guardar
+            </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
